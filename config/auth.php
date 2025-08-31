@@ -15,7 +15,7 @@ return [
 
     'defaults' => [
         'guard' => env('AUTH_GUARD', 'web'),
-        'passwords' => 'admin1234',
+        'passwords' => 'admin12345',
     ],
 
     /*
