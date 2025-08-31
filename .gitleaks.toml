@@ -31,7 +31,7 @@ regexes = [
 [[rules]]
 id = "generic-password"
 description = "Generic password assignment (hardcoded values)"
-regex = '''(?i)(password|passwd|pwd|secret)\s*[:=]\s*['"][A-Za-z0-9!@#$%^&*()_+\-={}\[\]:;'",.<>?]{4,}['"]'''
+regex = '''(?i)(password|passwd|pwd|secret)\s*['"]?\s*[:=>\-]+\s*['"][A-Za-z0-9!@#$%^&*()_+\-={}\[\]:;'",.<>?]{4,}['"]'''
 tags = ["password", "secret"]
 
 # 2. Database connection strings
