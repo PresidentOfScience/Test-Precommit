@@ -26,7 +26,7 @@ regexes = [
 id = "generic-password"
 description = "Generic password assignment"
 regex = '''(?i)(password|passwd|pwd|secret)\s*[:=]\s*['"]?[A-Za-z0-9!@#$%^&*()_+\-={}\[\]:;'",.<>?]{4,}['"]?'''
-tags = ["password", "secret"]
+tags = ["password", "passwords", "secret"]
 
 [[rules]]
 id = "db-connection-string"
