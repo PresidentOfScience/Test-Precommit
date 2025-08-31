@@ -68,3 +68,38 @@ id = "email-password-pair"
 description = "Email + password combo in code"
 regex = '''[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\s*[,;:\t ]+\s*['"]?[A-Za-z0-9!@#$%^&*()_+]{6,}['"]?'''
 tags = ["email", "password"]
+
+# 7. OpenAI API Keys (sk- prefix)
+[[rules]]
+id = "openai-api-key"
+description = "OpenAI API key pattern"
+regex = '''sk-[a-zA-Z0-9]{48}'''
+tags = ["api", "key", "openai"]
+
+# 8. Generic API key patterns (regardless of variable name)
+[[rules]]
+id = "generic-api-key-pattern"
+description = "Generic API key patterns based on content"
+regex = '''['"][a-zA-Z0-9_-]{32,}['"]'''
+tags = ["api", "key", "generic"]
+
+# 9. Strong password patterns (regardless of variable name)
+[[rules]]
+id = "strong-password-pattern"
+description = "Strong password patterns with mixed characters"
+regex = '''['"][A-Za-z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\?]{12,}['"]'''
+tags = ["password", "strong"]
+
+# 10. AWS Access Key pattern
+[[rules]]
+id = "aws-access-key"
+description = "AWS Access Key ID pattern"
+regex = '''AKIA[0-9A-Z]{16}'''
+tags = ["aws", "key", "access"]
+
+# 11. SSH key content pattern (regardless of variable name)
+[[rules]]
+id = "ssh-key-content"
+description = "SSH key content pattern"
+regex = '''['"]ssh-rsa\s+[A-Za-z0-9+/=]+(\s+\S*)?['"]'''
+tags = ["ssh", "key", "content"]
