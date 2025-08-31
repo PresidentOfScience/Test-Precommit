@@ -21,3 +21,15 @@ regexes = [
     '''^\{\d{0,2}}$''',
     '''^@([A-Z_]+|[a-z_]+)@$''',
 ]
+
+[[rules]]
+id = "generic-password"
+description = "Generic password assignment"
+regex = '''(?i)(password|passwd|pwd|secret)\s*[:=]\s*['"]?[A-Za-z0-9!@#$%^&*()_+\-={}\[\]:;'",.<>?]{4,}['"]?'''
+tags = ["password", "secret"]
+
+[[rules]]
+id = "db-connection-string"
+description = "Database connection string with credentials"
+regex = '''[a-zA-Z]+:\/\/[A-Za-z0-9._%+-]+:[^@]+@[A-Za-z0-9._%+-]+(:[0-9]+)?\/[A-Za-z0-9._%+-]+'''
+tags = ["db", "connection", "credentials"]
